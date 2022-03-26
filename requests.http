@@ -1,0 +1,47 @@
+### Superheroes Index
+GET http://localhost:3000/superhero
+
+### Superheroes Show
+GET http://localhost:3000/superhero/1
+
+### Superheroes Create
+POST http://localhost:3000/superhero
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgxODI3MTB9.6mVG9eVwJ56XVcMB4sb6QjpbCT2gjRQZyTx9NEAhsZc
+
+{
+  "input_secret_identity": "N/A",
+  "input_hero_name": "Luscious 3",
+  "input_power_level": "87",
+  "input_power": "Teleportation"
+}
+
+### Superheroes Update
+PATCH http://localhost:3000/superhero/1
+Content-Type: application/json
+
+{
+  "input_power_level": "88"
+}
+
+### Superheroes Destroy
+DELETE http://localhost:3000/superhero/5
+
+### Users Create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "input_name": "Teliyah",
+  "input_password": "password",
+  "input_password_confirmation": "password"
+}
+
+### Sessions Create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "name": "Reece",
+  "password": "password"
+}
